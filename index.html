@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Temperature Hot</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        #error-div h4 {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form class="col-md-6 m-auto py-5">
+            <div class="input-group mb-3">
+                <input id="input-field" type="text" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-danger" onclick="getInputValue()">Search</button>
+                </div>
+            </div>
+        </form>
+        <div class="weather-status text-white text-center" id="weather-container">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="">
+            <h1 id="city-name">Dhaka</h1>
+            <h3 id="degree-celcious"><span>38.06</span>&deg;C</h3>
+            <h1 class="lead" id="weather-condition">Clouds</h1>
+        </div>
+        <!-- error message -->
+        <div class="d-none" id="error-div">
+            <h4 class="text-center text-white fs-6">please search the city name correctly</h4>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="weather.js"></script>
+
+</body>
+
+</html>
